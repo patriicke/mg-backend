@@ -1,0 +1,39 @@
+db:
+  host: 'localhost'
+  type: 'postgres'
+  port: 5432
+  username: 'postgres'
+  password: 'root'
+  database: 'cryptomg'
+  synchronize: false
+
+aurora:
+  type: 'aurora'
+  region: ''
+  secretArn: ''
+  resourceArn: ''
+  database: ''
+  synchronize: false
+
+jwt:
+  secret: 'example@123'
+
+feJwt:
+  secret: 'example@123'
+
+opensea:
+  apiKey: '60981a7b88934a93b222e1bffdeb6a9e'
+  provider: 'https://mainnet.infura.io/v3/ef24415b5a5546a781094615944e4bde'
+  
+googleOauth:
+  clientId: 524888416580-e4q7ccikvba0jubdup78hedrhnnspmnu.apps.googleusercontent.com
+  clientSecret: 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
+
+nowPay:
+  baseUri: 'https://api-sandbox.nowpayments.io/v1'
+  apiKey: 'SYFRFMN-TDX4G3F-NE9TZA5-X89FTKD'
+  secretKey: 'TestSecretKey@123'
+
+cryptoSlot:
+  baseUri: 'https://pro-api.coingecko.com/api/v3'
+  apiKey: 'CG-AUWKMWdo23NVwUSMKqNWSbbL'

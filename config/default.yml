@@ -1,0 +1,73 @@
+server:
+  port: 7777
+  origin: 'http://localhost:5000'
+
+db:
+  host: 'localhost'
+  type: 'postgres'
+  port: 5432
+  username: 'postgres'
+  password: 'root'
+  synchronize: false
+  database: 'cryptomg'
+
+jwt:
+  # expiresIn: 10
+  expiresIn: 900
+  refreshExpiresIn: 604800
+  cookieExpiresIn: 604800
+
+feJwt:
+  # expiresIn: 10
+  expiresIn: 1500
+  refreshExpiresIn: 604800
+  cookieExpiresIn: 604800
+
+app:
+  fallbackLanguage: 'en'
+  name: 'monorepo'
+  version: 'v0.1'
+  description: 'Official monorepo API'
+  appUrl: 'https://6256-110-44-123-47.ngrok.io'
+  frontendUrl: 'http://localhost:5000'
+  sameSite: false
+
+mail:
+  host: 'smtp.mailtrap.io'
+  port: 2525
+  user: '4cdd824f584436'
+  pass: '78809ff4c7811c'
+  from: 'monorepo'
+  fromMail: 'info@app.com'
+  preview: true
+  secure: false
+  ignoreTLS: true
+  queueName: 'monorepo-mail'
+
+queue:
+  driver: 'redis'
+  host: 'localhost'
+  port: 6379
+  db: ''
+  password: ''
+  username: ''
+
+throttle:
+  global:
+    ttl: 60
+    limit: 60
+  login:
+    prefix: 'login_fail_throttle'
+    limit: 5
+    duration: 2592000
+    blockDuration: 3000
+
+twofa:
+  authenticationAppNAme: 'monorepo'
+
+winston:
+  groupName: 'monorepo'
+  streamName: 'monorepo-stream'
+  awsAccessKeyId: ''
+  awsSecretAccessKey: ''
+  awsRegion: ''

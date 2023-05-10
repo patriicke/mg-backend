@@ -1,0 +1,71 @@
+version: '3.7'
+
+services:
+  backend-api:
+    container_name: monorepo-backend-api
+    build:
+      context: .
+      dockerfile: ./apps/backend-api/Dockerfile
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+    env_file:
+      - .env
+    networks:
+      - webnet
+    depends_on:
+      - postgres
+    volumes:
+      - .:/src:cached
+  
+  frontend-api:
+    container_name: monorepo-frontend-api
+    build:
+      context: .
+      dockerfile: ./apps/frontend-api/Dockerfile
+    ports:
+      - ${FRONTEND_SERVER_PORT}:${FRONTEND_SERVER_PORT}
+    env_file:
+      - .env
+    networks:
+      - webnet
+    depends_on:
+      - postgres
+    volumes:
+      - .:/src:cached
+
+  postgres:
+    container_name: postgres
+    image: postgres:12
+    env_file:
+      - .env
+    networks:
+      - webnet
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_DB: ${DB_DATABASE_NAME}
+      PG_DATA: /var/lib/postgresql/data
+    ports:
+      - ${DB_PORT}:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: "redis:alpine"
+    container_name: redis
+    restart: always
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+    volumes:
+      - .:/data
+    env_file:
+      - .env
+    ports:
+      - ${REDIS_PORT}:6379
+
+
+networks:
+  webnet:
+    driver: bridge
+volumes:
+  pgdata:

@@ -1,0 +1,45 @@
+{
+  "character": {
+    "one": "शब्द",
+    "other": "शब्दहरू",
+    "zero": "शब्द"
+  },
+  "digit": {
+    "one": "अंक",
+    "other": "अंकहरू",
+    "zero": "अंक"
+  },
+  "minute": {
+    "one": "minute",
+    "other": "minutes",
+    "zero": "minute"
+  },
+  "disposableEmail": "डिस्पोजेबल इमेल डोमेनहरूलाई अनुमति छैन।",
+  "Unauthorized": "अवैध ईमेल/पासवर्ड",
+  "Not Found": "डाटा भेटिएन",
+  "isNotEmpty": "$t(app.{property}) खाली हुनु हुँदैन",
+  "maxLength": "$t(app.{property})को अधिकतम शब्द गणना {ln} मात्र हुनुपर्छ",
+  "minLength": "$t(app.{property})को न्यूनतम शब्द गणना {ln} हुनुपर्छ",
+  "exactLength": "$t(app.{property}) को शब्द गणना {ln} हुनुपर्छ",
+  "max": "$t(app.{property}) {ln} भन्दा कम वा बराबर हुन सक्छ",
+  "min": "$t(app.{property}) {ln} भन्दा ठूलो वा बराबर हुनै पर्छ",
+  "password should contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character": "पासवर्ड कम्तिमा एउटा सानो अक्षर, एक ठूलो अक्षर, एक संख्यात्मक अंक, र एक विशेष वर्ण हुनु पर्छ",
+  "password should contain at least 6 character": "पासवर्ड कम्तिमा ६ अक्षरको हुनु पर्छ",
+  "isEqualTo": "$t(app.{property}) $t(app.{field}) जस्तै हुनु पर्छ",
+  "isLowercase": "$t(app.{property}) लोअरकेसमा हुनुपर्छ",
+  "isIn": "$t(app.{property}) {items} मध्ये एक हुनुपर्दछ",
+  "isEnum": "$t(app.{property}) {items} मध्ये एक हुनुपर्दछ",
+  "isNumberString": "$t(app.{property}) नम्बर हुनुपर्दछ",
+  "isNumber": "$t(app.{property}) नम्बर हुनुपर्दछ",
+  "isEmail": "क्षेत्र मान्य ईमेल हुनुपर्दछ",
+  "isString": "क्षेत्र शब्दहरू हुनुपर्दछ",
+  "isBoolean": "क्षेत्र सही वा गलत बीचमा चयन गरिएको हुनुपर्दछ",
+  "already taken": "$t(app.{property}) पहिले नै अर्को प्रयोगकर्ता द्वारा प्रयोग गरीएको छ",
+  "unique": "$t(app.{property}) पहिले नै अर्को प्रयोगकर्ता द्वारा प्रयोग गरीएको छ",
+  "registrationUnique": "$t(app.{property}) पहिले नै अर्को प्रयोगकर्ता द्वारा प्रयोग गरीएको छ",
+  "isDate": "क्षेत्र मान्य मिति हुनुपर्छ",
+  "isLength": "$t(app.{property}) {ln} $t(validation.digit, {{\"count\": {count} }}) हुनुपर्दछ",
+  "isDateString": "$t(app.{property}) मान्य मिति हुनुपर्छ",
+  "isPhoneNumber": "$t(app.{property}) मान्य नेपाली फोन नम्बर हुनुपर्छ",
+  "emptyFile": "$t(app.{property}) खाली हुनु हुँदैन"
+}

@@ -1,0 +1,59 @@
+server:
+  http_listen_port: 0
+  grpc_listen_port: 0
+
+positions:
+  filename: /tmp/positions.yaml
+
+client:
+  url: https://355272:eyJrIjoiMDNmMGUwMjlkZDU1NDJhOTViMmYzYTc3ZmMyMzBjM2NhODMyNGE5ZSIsIm4iOiJQWi1kZXYtbWV0cmljcy1wdWJsaXNoZXIiLCJpZCI6NzY5NDY0fQ==@logs-prod-014.grafana.net/loki/api/v1/push
+
+scrape_configs:
+
+- job_name: backend-service-logs 
+  static_configs:
+  - targets:
+      - localhost
+    labels:
+      job: backend_service_combined_logs
+      __path__: /var/logs/backend-api/combined.*.log
+
+- job_name: backend-service-error-logs
+  static_configs:
+  - targets:
+      - localhost
+    labels:
+      job: backend_service_error_logs
+      __path__: /var/logs/backend-api/error.*.log
+
+- job_name: frontend-service-logs 
+  static_configs:
+  - targets:
+      - localhost
+    labels:
+      job: frontend_service_combined_logs
+      __path__: /var/logs/frontend-api/combined.*.log
+
+- job_name: frontend-service-error-logs
+  static_configs:
+  - targets:
+      - localhost
+    labels:
+      job: frontend_service_error_logs
+      __path__: /var/logs/frontend-api/error.*.log
+
+- job_name: queue-service-logs 
+  static_configs:
+  - targets:
+      - localhost
+    labels:
+      job: queue_combined_logs
+      __path__: /var/logs/queue/combined.*.log
+
+- job_name: queue-service-error-logs
+  static_configs:
+  - targets:
+      - localhost
+    labels:
+      job: queue_error_logs
+      __path__: /var/logs/queue/error.*.log

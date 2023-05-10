@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "esModuleInterop": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "paths": {
+      "@app/config": ["libs/config/src"],
+      "@app/config/*": ["libs/config/src/*"],
+      "@app/common-module": ["libs/common-module/src"],
+      "@app/common-module/*": ["libs/common-module/src/*"],
+      "@app/modules": ["libs/modules/src"],
+      "@app/modules/*": ["libs/modules/src/*"],
+      "@app/s3-helper": ["libs/s3-helper/src"],
+      "@app/s3-helper/*": ["libs/s3-helper/src/*"],
+      "@app/auth0-gateways": ["libs/auth0-gateways/src"],
+      "@app/auth0-gateways/*": ["libs/auth0-gateways/src/*"],
+      "@notification/notification": ["libs/notification/src"],
+      "@notification/notification/*": ["libs/notification/src/*"],
+      "@app/rabbitmq": ["libs/rabbitmq/src"],
+      "@app/rabbitmq/*": ["libs/rabbitmq/src/*"],
+      "@app/cron-jobs": ["libs/cron-jobs/src"],
+      "@app/cron-jobs/*": ["libs/cron-jobs/src/*"],
+      "@app/request-context": ["libs/request-context/src"],
+      "@app/request-context/*": ["libs/request-context/src/*"],
+      "@app/bull-queue-lib": ["libs/bull-queue-lib/src"],
+      "@app/bull-queue-lib/*": ["libs/bull-queue-lib/src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,132 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/backend-api/src",
+  "compilerOptions": {
+    "plugins": ["@nestjs/swagger"],
+    "assets": [
+      {
+        "include": "i18n/**/*",
+        "outDir": "dist/apps/backend-api/src",
+        "watchAssets": true
+      },
+      {
+        "include": "mail/templates/**/*",
+        "outDir": "dist/src",
+        "watchAssets": true
+      }
+    ],
+    "webpack": false,
+    "tsConfigPath": "apps/backend-api/tsconfig.app.json"
+  },
+  "plugins": [
+    {
+      "name": "@nestjs/swagger",
+      "options": {
+        "dtoFileNameSuffix": [".dto.ts", ".entity.ts"],
+        "classValidatorShim": true,
+        "introspectComments": true
+      }
+    }
+  ],
+  "monorepo": true,
+  "root": "apps/backend-api",
+  "projects": {
+    "backend-api": {
+      "type": "application",
+      "root": "apps/backend-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/backend-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/backend-api/tsconfig.app.json"
+      }
+    },
+    "frontend-api": {
+      "type": "application",
+      "root": "apps/frontend-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/frontend-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/frontend-api/tsconfig.app.json"
+      }
+    },
+    "queue": {
+      "type": "application",
+      "root": "apps/queue",
+      "entryFile": "main",
+      "sourceRoot": "apps/queue/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/queue/tsconfig.app.json"
+      }
+    },
+    "config": {
+      "type": "library",
+      "root": "libs/config",
+      "entryFile": "index",
+      "sourceRoot": "libs/config/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/config/tsconfig.lib.json"
+      }
+    },
+    "common-module": {
+      "type": "library",
+      "root": "libs/common-module",
+      "entryFile": "index",
+      "sourceRoot": "libs/common-module/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common-module/tsconfig.lib.json"
+      }
+    },
+    "modules": {
+      "type": "library",
+      "root": "libs/modules",
+      "entryFile": "index",
+      "sourceRoot": "libs/modules/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/modules/tsconfig.lib.json"
+      }
+    },
+    "s3-helper": {
+      "type": "library",
+      "root": "libs/s3-helper",
+      "entryFile": "index",
+      "sourceRoot": "libs/s3-helper/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/s3-helper/tsconfig.lib.json"
+      }
+    },
+    "request-context": {
+      "type": "library",
+      "root": "libs/request-context",
+      "entryFile": "index",
+      "sourceRoot": "libs/request-context/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/request-context/tsconfig.lib.json"
+      }
+    },
+    "queue-bull": {
+      "type": "application",
+      "root": "apps/queue-bull",
+      "entryFile": "main",
+      "sourceRoot": "apps/queue-bull/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/queue-bull/tsconfig.app.json",
+        "assets": [
+          {
+            "include": "mail/templates/**/*",
+            "outDir": "dist/apps/queue-bull/src",
+            "watchAssets": true
+          }
+        ]
+      }
+    },
+    "bull-queue-lib": {
+      "type": "library",
+      "root": "libs/bull-queue-lib",
+      "entryFile": "index",
+      "sourceRoot": "libs/bull-queue-lib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/bull-queue-lib/tsconfig.lib.json"
+      }
+    }
+  }
+}

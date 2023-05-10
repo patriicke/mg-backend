@@ -1,0 +1,31 @@
+db:
+  host: 'localhost'
+  type: 'postgres'
+  port: 5432
+  username: 'postgres'
+  password: 'root'
+  database: 'monorepo-cms'
+  synchronize: false
+
+aurora:
+  type: 'aurora'
+  region: ''
+  secretArn: ''
+  resourceArn: ''
+  database: ''
+  synchronize: false
+
+jwt:
+  secret: 'example@123'
+
+feJwt:
+  # expiresIn: 10
+  expiresIn: 900
+  refreshExpiresIn: 604800
+  cookieExpiresIn: 604800
+  secret: 'example@123'
+
+nowPay:
+  baseUri: 'https://api.nowpay.com'
+  apiKey: 'example@123'
+  secretKey: 'example@123'

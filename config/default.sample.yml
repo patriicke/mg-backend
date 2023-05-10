@@ -1,0 +1,51 @@
+db:
+  host: 'localhost'
+  type: 'postgres'
+  port: 5432
+  username: 'mg_crypto'
+  password: 'mgcrypto@1994'
+  database: 'mg_crypto_db'
+  synchronize: false
+
+aurora:
+  type: 'aurora'
+  region: ''
+  secretArn: ''
+  resourceArn: ''
+  database: ''
+  synchronize: false
+
+jwt:
+  secret: 'example@1238879797@32'
+
+feJwt:
+  # expiresIn: 10
+  expiresIn: 900
+  refreshExpiresIn: 604800
+  cookieExpiresIn: 604800
+  secret: 'example@123asdf23esdf'
+
+nowPay:
+  baseUri: 'https://api-sandbox.nowpayments.io/v1'
+  apiKey: 'SYFRFMN-TDX4G3F-NE9TZA5-X89FTKD'
+  secretKey: 'TestSecretKey@123'
+
+mail:
+  host: 'in-v3.mailjet.com'
+  port: 587
+  user: '67d6fcb6e6aaf17b165e8ceec6761c0a'
+  pass: '4e1e643db3e6ca25f17da328d26a14be'
+  from: 'Game'
+  fromMail: 'roshan.ranabhat@ekbana.info'
+  preview: false
+  secure: false
+  ignoreTLS: true
+  queueName: 'monorepo-mail'
+
+opensea: 
+  apiKey: '60981a7b88934a93b222e1bffdeb6a9e'
+  provider: 'https://mainnet.infura.io/v3/ef24415b5a5546a781094615944e4bde'
+
+googleOauth:
+  clientId: 524888416580-e4q7ccikvba0jubdup78hedrhnnspmnu.apps.googleusercontent.com
+  clientSecret: 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
