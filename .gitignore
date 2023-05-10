@@ -28,11 +28,6 @@ dump.rdb
 *.sublime-workspace
 
 # IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 .env
 
 # YML files
@@ -43,3 +38,4 @@ dump.rdb
 
 # images
 /public/images
+.gitignore

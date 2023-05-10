@@ -2,7 +2,7 @@
   "name": "backend-api",
   "version": "0.0.3",
   "description": "monorepo API",
-  "author": "gobeam <roshanranabhat11@gmail.com>",
+  "author": "gobeam <patrickndayambaje4@gmail.com>",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
